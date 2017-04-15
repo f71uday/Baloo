@@ -25,12 +25,13 @@ public class Login extends AppCompatActivity {
         final EditText editText_password;
         Button button_signup;
         final FirebaseAuth firebaseAuth;
-
+        Button button_already_registered;
         final ProgressBar progressBar_signup;
         editText_email= (EditText)findViewById(R.id.editText_email);
         editText_password=(EditText)findViewById(R.id.editText_password);
         button_signup=(Button)findViewById(R.id.button_signup);
-        progressBar_signup= (ProgressBar)findViewById(R.id.progressBar_signup);
+        button_already_registered= (Button)findViewById(R.id.button_alreadyregistered);
+        progressBar_signup= (ProgressBar)findViewById(R.id.progressBar_signingup);
        firebaseAuth= FirebaseAuth.getInstance();
         progressBar_signup.setVisibility(View.INVISIBLE);
         button_signup.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +76,12 @@ public class Login extends AppCompatActivity {
 
                     }
                 });
+            }
+        });
+        button_already_registered.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Login.this,"Activity need to be created",Toast.LENGTH_LONG);
             }
         });
     }

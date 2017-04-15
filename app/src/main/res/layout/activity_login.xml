@@ -1,70 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.boophee.baloo.Login"
-    android:background="#00695C">
-
-    <EditText
-        android:background="@color/common_google_signin_btn_text_dark"
-        android:id="@+id/editText_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter Email Address"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="160dp" />
-
-    <EditText
-        android:background="@color/common_google_signin_btn_text_dark"
-        android:id="@+id/editText_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="234dp" />
+    android:background="#00695c">
 
     <TextView
         android:id="@+id/textView_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
         android:text="TextView"
-        android:textColor="#F9A825"
+        android:textColor="#ff8f00"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="86dp"
         tools:text="Sign Up" />
 
-    <ProgressBar
-        android:id="@+id/progressBar_signup"
-        style="?android:attr/progressBarStyle"
+    <EditText
+        android:id="@+id/editText_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="434dp" />
+        android:layout_below="@+id/textView_signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="E-mail" />
+
+    <EditText
+        android:id="@+id/editText_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText_email"
+        android:layout_alignStart="@+id/editText_email"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/button_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F9A825"
-        android:text="Register"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="300dp" />
+        android:layout_below="@+id/editText_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:background="#ff8f00"
+        android:text="Sign Up"
+        android:textColor="@android:color/black" />
 
     <Button
         android:id="@+id/button_alreadyregistered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button_signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
         android:background="@android:color/transparent"
-        android:text="Already Registered"
-        android:textColor="#42A5F5"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="358dp" />
-</android.support.constraint.ConstraintLayout>
+        android:text="Already Registred?"
+        android:textColor="#ff8f00" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_signingup"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_alreadyregistered"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+</RelativeLayout>
