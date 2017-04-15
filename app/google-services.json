@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "492432881427",
+    "firebase_url": "https://baloo-f644d.firebaseio.com",
+    "project_id": "baloo-f644d",
+    "storage_bucket": "baloo-f644d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492432881427:android:31d0e3fa22e13c53",
+        "android_client_info": {
+          "package_name": "com.boophee.baloo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492432881427-rlr4chvntoehffu6c98mup7cu1ljbbmt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.boophee.baloo",
+            "certificate_hash": "b9a6d702da59033235c64da53d7cee102e1f65ae"
+          }
+        },
+        {
+          "client_id": "492432881427-gc20ui5ak1tmaj0aloo5s54k1nqerp85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2f7kpV2RILEdurn_gkVy5hnDb9893-0M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492432881427-gc20ui5ak1tmaj0aloo5s54k1nqerp85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
