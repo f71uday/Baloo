@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="#00695c">
 
     <TextView
-        android:id="@+id/textView_signup"
+        android:id="@+id/textView_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp"
-        android:text="Sign Up"
+        android:layout_marginTop="73dp"
+        android:text="Login"
         android:textColor="#ff8f00"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:text="Sign Up" />
+        android:textSize="35sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editText_email"
+        android:id="@+id/editText_login_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_signup"
+        android:layout_below="@+id/textView_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
         android:ems="10"
@@ -30,44 +27,36 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editText_password"
+        android:id="@+id/editText_login_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText_email"
-        android:layout_alignStart="@+id/editText_email"
-        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText_login_email"
+        android:layout_alignStart="@+id/editText_login_email"
+        android:layout_below="@+id/editText_login_email"
+        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/signup_button"
+        android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_password"
+        android:layout_below="@+id/editText_login_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="43dp"
         android:background="#ff8f00"
-        android:text="Sign Up"
-        android:textColor="@android:color/black" />
-
-    <Button
-        android:id="@+id/button_alreadyregistered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/signup_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:background="@android:color/transparent"
-        android:text="Already Registred?"
-        android:textColor="#ff8f00" />
+        android:text="LogIn" />
 
     <ProgressBar
-        android:id="@+id/progressBar_signingup"
-        style="?android:attr/progressBarStyle"
+        android:id="@+id/progressBar_login"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_alreadyregistered"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp" />
+        android:layout_alignEnd="@+id/editText_login_password"
+        android:layout_alignLeft="@+id/editText_login_password"
+        android:layout_alignRight="@+id/editText_login_password"
+        android:layout_alignStart="@+id/editText_login_password"
+        android:layout_below="@+id/button_login"
+        android:layout_marginTop="57dp" />
 </RelativeLayout>

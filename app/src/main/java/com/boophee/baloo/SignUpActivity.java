@@ -1,5 +1,6 @@
 package com.boophee.baloo;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
         final EditText editText_email;
         final EditText editText_password;
         Button button_signup;
@@ -84,7 +85,9 @@ public class SignUpActivity extends AppCompatActivity {
         button_already_registered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SignUpActivity.this,"Activity need to be created",Toast.LENGTH_LONG).show();
+                //Toast.makeText(SignUpActivity.this,"Activity need to be created",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                startActivity(intent);
             }
         });
     }
