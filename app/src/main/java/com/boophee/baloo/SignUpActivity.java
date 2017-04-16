@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Login extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +45,17 @@ public class Login extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email))
                 {
-                    Toast.makeText(Login.this,"Email field can not be empty ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this,"Email field can not be empty ",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password))
                 {
-                    Toast.makeText(Login.this,"password can not be empty ",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this,"password can not be empty ",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!email.contains("@"))
                 {
-                    Toast.makeText(Login.this,"enter a valid email adress",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this,"enter a valid email adress",Toast.LENGTH_SHORT).show();
                     editText_email.selectAll();
                     return;
                 }
@@ -66,13 +66,13 @@ public class Login extends AppCompatActivity {
                          if(task.isSuccessful())
                          {
                              //pass intent to new activity here
-                             Toast.makeText(Login.this,"Account created successfully ",Toast.LENGTH_LONG).show();
+                             Toast.makeText(SignUpActivity.this,"Account created successfully ",Toast.LENGTH_LONG).show();
                              progressBar_signup.setVisibility(View.INVISIBLE);
                          }
                          if (!task.isSuccessful())
                          {
                              progressBar_signup.setVisibility(View.INVISIBLE);
-                             Toast.makeText(Login.this,"unable to create a account",Toast.LENGTH_SHORT).show();
+                             Toast.makeText(SignUpActivity.this,"unable to create a account",Toast.LENGTH_SHORT).show();
                              return;
 
                          }
@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity {
         button_already_registered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Login.this,"Activity need to be created",Toast.LENGTH_LONG).show();
+                Toast.makeText(SignUpActivity.this,"Activity need to be created",Toast.LENGTH_LONG).show();
             }
         });
     }
