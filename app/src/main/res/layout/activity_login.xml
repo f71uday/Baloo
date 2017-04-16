@@ -41,7 +41,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button_signup"
+        android:id="@+id/signup_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_password"
@@ -55,7 +55,7 @@
         android:id="@+id/button_alreadyregistered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_signup"
+        android:layout_below="@+id/signup_button"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:background="@android:color/transparent"

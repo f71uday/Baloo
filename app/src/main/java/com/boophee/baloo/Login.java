@@ -29,30 +29,33 @@ public class Login extends AppCompatActivity {
         final ProgressBar progressBar_signup;
         editText_email= (EditText)findViewById(R.id.editText_email);
         editText_password=(EditText)findViewById(R.id.editText_password);
-        button_signup=(Button)findViewById(R.id.button_signup);
+        button_signup=(Button)findViewById(R.id.signup_button);
         button_already_registered= (Button)findViewById(R.id.button_alreadyregistered);
         progressBar_signup= (ProgressBar)findViewById(R.id.progressBar_signingup);
        firebaseAuth= FirebaseAuth.getInstance();
         progressBar_signup.setVisibility(View.INVISIBLE);
+
+
         button_signup.setOnClickListener(new View.OnClickListener() {
-            String email= editText_email.getText().toString();
-            String password =editText_password.getText().toString();
 
             @Override
             public void onClick(View v) {
+                String email= editText_email.getText().toString();
+                String password =editText_password.getText().toString();
+
                 if (TextUtils.isEmpty(email))
                 {
-                    Toast.makeText(Login.this,"Email field can not be empty ",Toast.LENGTH_SHORT);
+                    Toast.makeText(Login.this,"Email field can not be empty ",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password))
                 {
-                    Toast.makeText(Login.this,"password can not be empty ",Toast.LENGTH_SHORT);
+                    Toast.makeText(Login.this,"password can not be empty ",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (!email.contains("@"))
                 {
-                    Toast.makeText(Login.this,"enter a valid email adress",Toast.LENGTH_SHORT);
+                    Toast.makeText(Login.this,"enter a valid email adress",Toast.LENGTH_SHORT).show();
                     editText_email.selectAll();
                     return;
                 }
@@ -63,13 +66,13 @@ public class Login extends AppCompatActivity {
                          if(task.isSuccessful())
                          {
                              //pass intent to new activity here
-                             Toast.makeText(Login.this,"Account created successfully ",Toast.LENGTH_LONG);
+                             Toast.makeText(Login.this,"Account created successfully ",Toast.LENGTH_LONG).show();
                              progressBar_signup.setVisibility(View.INVISIBLE);
                          }
                          if (!task.isSuccessful())
                          {
                              progressBar_signup.setVisibility(View.INVISIBLE);
-                             Toast.makeText(Login.this,"unable to create a account",Toast.LENGTH_SHORT);
+                             Toast.makeText(Login.this,"unable to create a account",Toast.LENGTH_SHORT).show();
                              return;
 
                          }
@@ -81,7 +84,7 @@ public class Login extends AppCompatActivity {
         button_already_registered.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Login.this,"Activity need to be created",Toast.LENGTH_LONG);
+                Toast.makeText(Login.this,"Activity need to be created",Toast.LENGTH_LONG).show();
             }
         });
     }
