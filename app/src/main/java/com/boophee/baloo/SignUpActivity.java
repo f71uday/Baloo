@@ -69,6 +69,8 @@ public class SignUpActivity extends AppCompatActivity {
                              //pass intent to new activity here
                              Toast.makeText(SignUpActivity.this,"Account created successfully ",Toast.LENGTH_LONG).show();
                              progressBar_signup.setVisibility(View.INVISIBLE);
+                             Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                             startActivity(intent);
                          }
                          if (!task.isSuccessful())
                          {

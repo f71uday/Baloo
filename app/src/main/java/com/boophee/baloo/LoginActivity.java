@@ -1,5 +1,6 @@
 package com.boophee.baloo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -55,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                         {
                             Toast.makeText(LoginActivity.this,"redirectin to new activity",Toast.LENGTH_SHORT).show();
                             progressBar_login.setVisibility(View.INVISIBLE);
+                            Intent intent =  new Intent(LoginActivity.this,MainActivity.class);
+                            startActivity(intent);
                         }
                         if (!task.isSuccessful())
                         {
